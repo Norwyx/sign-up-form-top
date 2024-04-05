@@ -167,3 +167,21 @@ Main Styles
         }
     }
 }
+
+
+
+/* 
+Media Queries
+*/
+@media (min-width: 50rem) {
+    form {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+
+        .form__element {
+            width: 50% !important;
+            flex: 1;
+            flex-basis: 40%;
+        }
+    }
+}
