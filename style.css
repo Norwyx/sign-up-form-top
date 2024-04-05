@@ -76,7 +76,6 @@ Variables
     0px 1.6px 2.4px hsl(var(--shadow-color) / 0.11),
     0px 3px 4.5px hsl(var(--shadow-color) / 0.22);
     --shadow-color: 286deg 36% 72%;
-    --section-shadow: 0px 4px 19px 1px rgba(0,0,0,0.15);
 }
 
 body {
@@ -97,6 +96,9 @@ Main Styles
 
     .top__logo {
         gap: .5rem;
+        background-color: rgba(0, 0, 0, 0.509);
+        padding: .75rem 0;
+        width: 100%;
     }
 
     .logo__image {
@@ -118,6 +120,7 @@ Main Styles
 
     .text__content, .bottom__form p {
         font-weight: 500;
+        font-size: clamp(100%, 1rem + 2vw, 24px);
     }
 
     .text__content:first-child {
@@ -125,7 +128,6 @@ Main Styles
     }
 
     .bottom__form p {
-        font-size: 1.25rem;
         margin-bottom: 1rem;
     }
 
@@ -156,6 +158,7 @@ Main Styles
 
     .bottom__action {
         button {
+            font-weight: 700;
             width: 100%;
             background-color: var(--btn-bg-clr);
             color: white;
@@ -164,6 +167,12 @@ Main Styles
             margin-bottom: 1rem;
             padding: .8rem 0;
             box-shadow: var(--input-shadow);
+        }
+
+        a {
+            color: var(--btn-bg-clr);
+            font-weight: 700;
+            text-decoration: none;
         }
     }
 }
@@ -182,6 +191,57 @@ Media Queries
             width: 50% !important;
             flex: 1;
             flex-basis: 40%;
+        }
+    }
+}
+
+@media (min-width: 68.75rem) {
+    main {
+        flex-direction: row !important;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .top {
+        background-size: cover;
+        min-height: 100vh;
+        width: 535px;
+
+        .top__logo {
+            position: relative;
+            top: -195px;
+        }
+    
+        .logo__image {
+            width: 95px;
+        }
+    
+        .logo__text {
+            font-size: 6rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .bottom {
+        width: 60%;
+        padding: 0 3rem;
+
+        .text__content {
+            margin-top: 1rem;
+        }
+
+        .text__content:first-child {
+            margin-bottom: 1.5rem;
+        }
+
+        .bottom__action {
+            text-align: left;
+            
+            button {
+                width: 30%;
+                padding: .8rem 0;
+                margin-bottom: 1.5rem;
+            }
         }
     }
 }
