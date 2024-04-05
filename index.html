@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
+    <title>Sign Up | The Odin Project</title>
     <link rel="shortcut icon" href="images/odin-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,33 +28,33 @@
                 <p>Let's do this!</p>
                 <form action="#" class="form flex column">
                     <div class="form__element">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name" value="Thor">
+                        <label for="first-name">FIRST NAME*</label>
+                        <input type="text" name="first-name" id="first-name" value="Thor" required pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$">
                     </div>
                     <div class="form__element">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name" value="Odinson">
+                        <input type="text" name="last-name" id="last-name" value="Odinson" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$">
                     </div>
                     <div class="form__element">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <label for="email">EMAIL*</label>
+                        <input type="email" name="email" id="email" required pattern="(?!(^[.-].*|[^@]*\.@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}">
                     </div>
                     <div class="form__element">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" name="phone" id="phone">
+                        <label for="phone">PHONE NUMBER*</label>
+                        <input type="tel" name="phone" id="phone" required pattern="((\+|00)?[1-9]{2}|0)[1-9]( ?[0-9]){8}">
                     </div>
                     <div class="form__element">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$">
                     </div>
                     <div class="form__element">
                         <label for="conf-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="conf-password" id="conf-password">
+                        <input type="password" name="conf-password" id="conf-password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$">
                     </div>
                 </form>
             </div>
             <div class="bottom__action text-center">
-                <button class="text-center">Create Account</button>
+                <button type="submit" class="text-center">Create Account</button>
                 <p>Already have an account? 
                     <a href="#" rel="noopener noreferrer">Log in</a>
                 </p>

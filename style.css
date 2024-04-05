@@ -69,7 +69,10 @@ Variables
 
 :root {
     --btn-bg-clr: #596D48;
+    --btn-bg-clr-hover: #404e34;
     --input-border-clr: #E5E7EB;
+    --input-border-clr-focus: rgb(13, 128, 243);
+    --input-border-clr-error: rgb(255, 32, 32);
     --text-clr: black;
     --input-shadow:
     0px 1px 1.5px hsl(var(--shadow-color) / 0),
@@ -153,6 +156,14 @@ Main Styles
                 padding: 0 .5rem;
                 box-shadow: var(--input-shadow);
             }
+
+            input:focus {
+                border-color: var(--input-border-clr-focus);
+            }
+
+            input:invalid {
+                border-color: var(--input-border-clr-error);
+            }
         }
     }
 
@@ -169,10 +180,20 @@ Main Styles
             box-shadow: var(--input-shadow);
         }
 
+        button:hover {
+            background-color: var(--btn-bg-clr-hover);
+            transition: .3s;
+        }
+
         a {
             color: var(--btn-bg-clr);
             font-weight: 700;
             text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--btn-bg-clr-hover);
+            transition: .3s;
         }
     }
 }
