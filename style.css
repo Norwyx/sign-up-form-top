@@ -9,7 +9,6 @@ button, input {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    cursor: pointer;
     outline: none;
     font-family: inherit;
     text-align: left;
@@ -55,4 +54,116 @@ REUSABLES
 
 .text-center {
     text-align: center;
+}
+
+
+
+/* 
+Variables
+*/
+@font-face {
+    font-family: 'Norse Bold';
+    src: url(Norse-Bold.otf);
+    font-display: swap;
+}
+
+:root {
+    --btn-bg-clr: #596D48;
+    --input-border-clr: #E5E7EB;
+    --text-clr: black;
+    --input-shadow:
+    0px 1px 1.5px hsl(var(--shadow-color) / 0),
+    0px 1.6px 2.4px hsl(var(--shadow-color) / 0.11),
+    0px 3px 4.5px hsl(var(--shadow-color) / 0.22);
+    --shadow-color: 286deg 36% 72%;
+    --section-shadow: 0px 4px 19px 1px rgba(0,0,0,0.15);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+
+
+
+/* 
+Main Styles
+*/
+.top {
+    background-image: url(/images/logo-background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 12.5rem;
+
+    .top__logo {
+        gap: .5rem;
+    }
+
+    .logo__image {
+        width: 65px;
+        height: auto;
+    }
+
+    .logo__text {
+        color: white;
+        font-family: 'Norse Bold', sans-serif;
+        font-size: 5rem;
+        margin-top: 1.2rem;
+    }
+}
+
+.bottom {
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+
+    .text__content, .bottom__form p {
+        font-weight: 500;
+    }
+
+    .text__content:first-child {
+        margin-bottom: 1rem;
+    }
+
+    .bottom__form p {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    form {
+        gap: 2rem;
+
+        .form__element {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: .25rem;
+
+            label {
+                font-size: .875rem;
+                letter-spacing: .5px;
+                opacity: .5;
+            }
+
+            input {
+                border: 1px solid var(--input-border-clr);
+                border-radius: 5px;
+                min-height: 35px;
+                padding: 0 .5rem;
+                box-shadow: var(--input-shadow);
+            }
+        }
+    }
+
+    .bottom__action {
+        button {
+            width: 100%;
+            background-color: var(--btn-bg-clr);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            padding: .8rem 0;
+            box-shadow: var(--input-shadow);
+        }
+    }
 }
